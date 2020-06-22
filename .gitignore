@@ -117,3 +117,8 @@ weave-ecs-demo-key.pem
 
 # Ignore jar files
 orders.jar
+
+.classpath
+.project
+.settings/
+.valvesecret
