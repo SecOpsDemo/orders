@@ -61,16 +61,16 @@ resources:
 
 readinessProbe:
   httpGet:
-    path: /
-    port: 8080
+    path: /health
+    port: 8082
   initialDelaySeconds: 60
   periodSeconds: 10
   failureThreshold: 3
 
 livenessProbe:
   httpGet:
-    path: /
-    port: 8080
+    path: /health
+    port: 8082
   initialDelaySeconds: 60
   periodSeconds: 10
   failureThreshold: 3
