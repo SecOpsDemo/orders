@@ -18,9 +18,7 @@ WORKDIR /data
 EXPOSE 8082
 COPY ./target/*.jar /data/ROOT.jar
 
-RUN	chmod +x /app && \
-	chown -R ${SERVICE_USER}:${SERVICE_GROUP} /app && \
-	setcap 'cap_net_bind_service=+ep' /app
+RUN	chown -R ${SERVICE_USER}:${SERVICE_GROUP} /data/ROOT.jar
 
 USER ${SERVICE_USER}
 
